@@ -1,6 +1,8 @@
 import express from 'express';
 import mysql from 'mysql';
 import cors from 'cors';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 
@@ -24,12 +26,11 @@ app.get('/', (req, res) => {
 
 app.post('/addreview', (req, res) => {
   const values = [req.body.movieName, req.body.movieReview];
-  console.log(req.body);
   const q =
     'INSERT INTO first_database.movie_reviews (movieName, movieReview) VALUES (?)';
   db.query(q, [values], (err, data) => {
     if (err) res.json(err);
-    return res.json('dasdasd');
+    return res.json("You've Successfully added a review!");
   });
 });
 

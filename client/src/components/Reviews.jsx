@@ -3,7 +3,7 @@ import axios from 'axios';
 import Review from './Review';
 
 const Reviews = () => {
-  const [reviews, setReviews] = useState();
+  const [reviews, setReviews] = useState([]);
 
   const getReviews = async () => {
     try {

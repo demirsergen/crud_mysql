@@ -4,8 +4,8 @@ const Review = ({ review }) => {
   const deleteReview = () => {};
   return (
     <div className="review-container">
-      <h3>{review.movieName}</h3>
-      <p>{review.movieReview}</p>
+      <h3>{review?.movieName}</h3>
+      <p>{review?.movieReview}</p>
       <button onClick={deleteReview}>Delete</button>
     </div>
   );
