@@ -5,10 +5,10 @@ import cors from 'cors';
 const app = express();
 
 const db = mysql.createConnection({
-  host: import.meta.env.VITE_HOST_NAME,
-  user: import.meta.env.VITE_USER_NAME,
-  password: import.meta.env.VITE_DB_PASSWORD,
-  database: import.meta.env.VITE_DATABASE,
+  host: process.env.VITE_HOST,
+  user: process.env.VITE_USER,
+  password: process.env.VITE_PASSWORD,
+  database: process.env.VITE_DATABASE,
 });
 
 app.use(express.json());
