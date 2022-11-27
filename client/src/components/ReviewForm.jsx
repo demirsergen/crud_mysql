@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../app.css';
+
 import axios from 'axios';
 
 const ReviewForm = () => {
@@ -7,6 +9,7 @@ const ReviewForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (movieName == '' || movieReview == '') return;
     try {
       await axios.post('http://localhost:3001/addreview', {
         movieName: movieName,
