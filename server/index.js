@@ -24,6 +24,15 @@ app.get('/', (req, res) => {
   });
 });
 
+app.delete('/delete/:id', (req, res) => {
+  const del = req.params.id;
+  const q = `DELETE FROM first_database.movie_reviews WHERE id = ?`;
+  db.query(q, [del], (err, data) => {
+    if (err) return res.json(err);
+    return res.json('deleted.');
+  });
+});
+
 app.post('/addreview', (req, res) => {
   const values = [req.body.movieName, req.body.movieReview];
   const q =

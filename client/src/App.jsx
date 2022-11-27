@@ -4,8 +4,8 @@ import Reviews from './components/Reviews';
 
 function App() {
   return (
-    <div className="bg-red-100 p-2">
-      <h1>Crud App</h1>
+    <div className="bg-red-100 p-2 h-screen w-1/2 mx-auto">
+      <h1 className="text-center">Crud App</h1>
       <ReviewForm />
       <Reviews />
     </div>

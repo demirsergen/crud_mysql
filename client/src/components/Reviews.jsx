@@ -18,7 +18,7 @@ const Reviews = () => {
     getReviews();
   }, []);
   return (
-    <div>
+    <div className="w-1/2 mx-auto flex flex-col items-center">
       {reviews?.map((review) => {
         return <Review key={review.id} review={review} />;
       })}

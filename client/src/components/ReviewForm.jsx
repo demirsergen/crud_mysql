@@ -22,8 +22,8 @@ const ReviewForm = () => {
     }
   };
   return (
-    <form>
-      <div>
+    <form className="p-2 bg-red-300 w-1/2 mx-auto flex flex-col items-center">
+      <div className="p-2">
         <input
           type="text"
           name="movieName"
@@ -31,6 +31,7 @@ const ReviewForm = () => {
           placeholder="Movie Name..."
           value={movieName}
           onChange={(e) => setMovieName(e.target.value)}
+          className="p-1"
           required
         />
       </div>
@@ -42,10 +43,15 @@ const ReviewForm = () => {
           placeholder="Movie Review..."
           value={movieReview}
           onChange={(e) => setMovieReview(e.target.value)}
+          className="p-1"
           required
         />
       </div>
-      <button type="submit" onClick={handleSubmit}>
+      <button
+        type="submit"
+        onClick={handleSubmit}
+        className="p-1 bg-white my-1"
+      >
         Submit
       </button>
     </form>
