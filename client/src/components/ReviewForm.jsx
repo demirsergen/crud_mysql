@@ -22,7 +22,7 @@ const ReviewForm = () => {
     }
   };
   return (
-    <form className="p-2 bg-red-300 w-1/2 mx-auto flex flex-col items-center">
+    <form className="p-2 w-1/2 mx-auto flex flex-col items-center">
       <div className="p-2">
         <input
           type="text"
@@ -50,7 +50,7 @@ const ReviewForm = () => {
       <button
         type="submit"
         onClick={handleSubmit}
-        className="p-1 bg-white my-1"
+        className="p-1 bg-white my-1 rounded"
       >
         Submit
       </button>

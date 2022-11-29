@@ -43,6 +43,17 @@ app.post('/addreview', (req, res) => {
   });
 });
 
+app.put('/update', (req, res) => {
+  const name = req.body.movieName;
+  const review = req.body.movieReview;
+  const sqlUpdate =
+    'UPDATE first_database.movie_reviews SET movieReview = ? WHERE movieName = ?';
+
+  db.query(sqlUpdate, [review, name], (err, result) => {
+    if (err) console.error(err);
+  });
+});
+
 app.listen('3001', () => {
   console.log('server running!');
 });
